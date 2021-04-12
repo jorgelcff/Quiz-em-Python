@@ -22,14 +22,14 @@ def loginPage(logdata):
     heading.config(font=('calibri 40'))
     heading.place(relx=0.15,rely=0.1)
 
-    #USER NAME
+    #NOME DE USUARIO
     ulabel = Label(login_frame,text="Usuário",font="calibri 12",fg='#f6ce6c',bg='#252525')
     ulabel.place(relx=0.21,rely=0.39)
     uname = Entry(login_frame,bg='#d3d3d3',fg='black',textvariable = user_name)
     uname.config(width=42)
     uname.place(relx=0.31,rely=0.4)
 
-    #PASSWORD
+    #SENHA
     plabel = Label(login_frame,text="Senha",font="calibri 12",fg='#f6ce6c',bg='#252525')
     plabel.place(relx=0.215,rely=0.49)
     pas = Entry(login_frame,bg='#d3d3d3',fg='black',textvariable = password)
@@ -45,7 +45,7 @@ def loginPage(logdata):
             error = Label(login_frame,text="Wrong Username or Password!",fg='black',bg='white')
             error.place(relx=0.37,rely=0.7)
     
-    #LOGIN BUTTON
+    #BOTÃO DE LOGIN
     log = Button(login_frame,text='Entrar',padx=5,pady=5,width=5,command=check, fg="#f6ce6c",bg="#252525")
     log.configure(width = 15,height=1, activebackground = "#33B5E5", relief = FLAT)
     log.place(relx=0.4,rely=0.6)
@@ -74,14 +74,14 @@ def signUpPage():
     heading.config(font=('calibri 40'))
     heading.place(relx=0.15,rely=0.2)
 
-    #nome completo
+    #NOME COMPLETO
     flabel = Label(sup_frame,text="Nome",fg='#f6ce6c',bg='#252525')
     flabel.place(relx=0.21,rely=0.5)
     fname = Entry(sup_frame,bg='#d3d3d3',fg='black',textvariable = fname)
     fname.config(width=42)
     fname.place(relx=0.31,rely=0.5)
 
-    #usuario
+    #USUARIO
     ulabel = Label(sup_frame,text="Usuário",fg='#f6ce6c',bg='#252525')
     ulabel.place(relx=0.21,rely=0.6)
     user = Entry(sup_frame,bg='#d3d3d3',fg='black',textvariable = uname)
@@ -89,7 +89,7 @@ def signUpPage():
     user.place(relx=0.31,rely=0.6)
     
     
-    #senha
+    #SENHA
     plabel = Label(sup_frame,text="Senha",fg='#f6ce6c',bg='#252525')
     plabel.place(relx=0.21,rely=0.7)
     pas = Entry(sup_frame,bg='#d3d3d3',fg='black',textvariable = passW)
@@ -121,7 +121,7 @@ def signUpPage():
         create.execute('SELECT * FROM userSignUp')
         z=create.fetchall()
         loginPage(z)
-    #signup BUTTON
+    #BOTAO DE CADASTRO
     sp = Button(sup_frame,text='Cadastrar!', font="calibri 13", padx=5,pady=5,width=5,command = addUserToDataBase, fg='#f6ce6c', bg="#252525")
     sp.configure(width = 15,height=1, activebackground = "#33B5E5", relief = FLAT)
     sp.place(relx=0.4,rely=0.8)
